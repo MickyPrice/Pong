@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pong Game</title>
+	<style>
+		#game-board {
+			position: relative;
+			width: 600px;
+			height: 400px;
+			border: 2px solid black;
+      overflow: hidden;
+			margin: auto;
+		}
+		#paddle-left, #paddle-right {
+			position: absolute;
+			width: 10px;
+			height: 60px;
+			background-color: black;
+		}
+		#paddle-left {
+			left: 0;
+			top: 170px;
+		}
+		#paddle-right {
+			right: 0;
+			top: 170px;
+		}
+		#ball {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: black;
+			border-radius: 50%;
+			left: 295px;
+			top: 195px;
+		}
+    #divider {
+      position: absolute;
+      width: 1px;
+      height: 400px;
+      border-right: 2px dashed black;
+      left: 300px;
+      top: 0;
+    }
+    #scoreboard {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+	</style>
+</head>
+<body>
+
+  <div id="scoreboard">
+    <span id="right-score">0</span>
+    <span>/</span>
+    <span id="left-score">0</span>
+  </div>
+	<div id="game-board">
+		<div id="paddle-left"></div>
+		<div id="paddle-right"></div>
+		<div id="ball"></div>
+    <div id="divider"></div>
+	</div>
+
+	<script src="pong.js"></script>
+</body>
+</html>
